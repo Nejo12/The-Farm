@@ -5,4 +5,5 @@ export const StyledDirectory = styled.div`
   justify-content: space-between;
   width: 100%;
   flex-wrap: wrap;
+  padding: 20px;
 `;
