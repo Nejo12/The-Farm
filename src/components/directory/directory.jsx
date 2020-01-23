@@ -14,33 +14,33 @@ class Directory extends React.Component {
           title: "Vegetables",
           imageUrl: "https://i.ibb.co/xYQNKvG/vegetables.jpg",
           id: 1,
-          linkUrl: "shop/vegetables"
+          linkUrl: "shop"
         },
 
         {
           title: "Fruits",
           imageUrl: "https://i.ibb.co/4mrd46D/fruits.jpg",
           id: 2,
-          linkUrl: "shop/fruits"
+          linkUrl: "shop"
         },
         {
           title: "Cereals",
           imageUrl: "https://i.ibb.co/fCW4dq0/cereals.jpg",
           id: 3,
-          linkUrl: "shop/cereals"
+          linkUrl: "shop"
         },
         {
           title: "Diary",
           imageUrl: "https://i.ibb.co/mXRFyTk/diary-cow.jpg",
           id: 4,
-          linkUrl: "shop/diary",
+          linkUrl: "shop",
           size: "large"
         },
         {
           title: "Spices",
           imageUrl: "https://i.ibb.co/KVYVRyV/spices.jpg",
           id: 5,
-          linkUrl: "shop/spices",
+          linkUrl: "shop",
           size: "large"
         }
       ]

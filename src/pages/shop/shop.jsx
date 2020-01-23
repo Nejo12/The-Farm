@@ -3,6 +3,7 @@ import React from "react";
 import SHOP_DATA from "./shop.data";
 
 import CollectionPreview from "../../components/collection-preview/collection-preview";
+import { StyledShop } from "./shop.styles";
 
 class Shop extends React.Component {
   constructor(props) {
@@ -17,11 +18,11 @@ class Shop extends React.Component {
     const { collections } = this.state;
 
     return (
-      <div className="shop-page">
+      <StyledShop className="shop-page">
         {collections.map(({ id, ...otherCollectionsProps }) => (
           <CollectionPreview key={id} {...otherCollectionsProps} />
         ))}
-      </div>
+      </StyledShop>
     );
   }
 }
