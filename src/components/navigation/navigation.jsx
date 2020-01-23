@@ -1,18 +1,29 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-import { StyledNavi } from "./navigation.styles";
+import { StyledNavi, StyledNaviContent } from "./navigation.styles";
 
-// const Logo = require("../../media/logo.png");
+import { ReactComponent as Logo } from "../../media/search_icon.svg";
 
 const Navigation = () => (
-  <StyledNavi className="navi-container">
-    <div className="navigation-content">
+  <StyledNavi>
+    <StyledNaviContent>
       <div className="brang-logo">
-        {/* <img src={Logo} alt="brand-logo" /> */}
-        Logo
+        <Link className="logo-container" to="/">
+          <Logo className="logo" />
+        </Link>
       </div>
-      <div className="welcome-text">Hello Gabriel</div>
-    </div>
+
+      <div className="options">
+        <Link to="/shop" className="option">
+          SHOP
+        </Link>
+        <Link to="/contact" className="option">
+          CONTACT
+        </Link>
+      </div>
+      <div className="welcome-text">HELLO Gabriel</div>
+    </StyledNaviContent>
   </StyledNavi>
 );
 
