@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import image from "../../media/three-baguettes.jpg";
+import image from "../../media/big-windmill.jpg";
 
 export const StyledHomeImage = styled.div`
   background: url(${image});
+  background-repeat: no-repeat;
   position: relative;
   background-size: 100%, cover;
   background-position: center, center;
@@ -10,9 +11,18 @@ export const StyledHomeImage = styled.div`
   height: 600px;
   animation: animateHomeImage 1s;
 
-  .home-image-content {
-    padding: 20px;
+  @keyframes animateHomeImage {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
+`;
+
+export const StyledContent = styled.div`
+  padding: 20px;
 
   .home-image-text {
     position: absolute;
@@ -28,18 +38,16 @@ export const StyledHomeImage = styled.div`
       font-size: 2rem;
     }
 
+    span {
+      color: green;
+      font-size: 42px;
+      text-shadow: 2px 2px #fff;
+      text-decoration: underline;
+    }
+
     p {
       font-size: 1rem;
       line-height: 1.3rem;
-    }
-  }
-
-  @keyframes animateHomeImage {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
     }
   }
 `;

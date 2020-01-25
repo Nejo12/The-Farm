@@ -39,6 +39,12 @@ const SHOP_DATA = [
         name: "Onions",
         imageUrl: "https://i.ibb.co/VHh63hX/Onions.jpg",
         price: 14
+      },
+      {
+        id: 7,
+        name: "Broccoli",
+        imageUrl: "https://i.ibb.co/w4Tzj4N/broccoli.jpg",
+        price: 14
       }
     ]
   },
@@ -65,17 +71,18 @@ const SHOP_DATA = [
         imageUrl: "https://i.ibb.co/gWZhnCn/sliced-melon.jpg",
         price: 1.1
       },
-      {
-        id: 13,
-        name: "pineapple",
-        imageUrl: "https://i.ibb.co/tc9T3tf/pineapple.jpg",
-        price: 1.3
-      },
+
       {
         id: 14,
         name: "strawberries",
         imageUrl: "https://i.ibb.co/dcMVF8N/strawberries.jpg",
         price: 1.6
+      },
+      {
+        id: 13,
+        name: "pineapple",
+        imageUrl: "https://i.ibb.co/tc9T3tf/pineapple.jpg",
+        price: 1.3
       },
       {
         id: 15,
@@ -96,9 +103,33 @@ const SHOP_DATA = [
         price: 1.1
       },
       {
-        id: 17,
+        id: 18,
         name: "Red Apples",
         imageUrl: "https://i.ibb.co/FgCy9Z5/red-apples.jpg",
+        price: 1.0
+      },
+      {
+        id: 19,
+        name: "Lime",
+        imageUrl: "https://i.ibb.co/fHzjBCG/lime.jpg",
+        price: 1.0
+      },
+      {
+        id: 20,
+        name: "Lemon",
+        imageUrl: "https://i.ibb.co/phGkg7h/lemon.jpg",
+        price: 1.0
+      },
+      {
+        id: 21,
+        name: "Kiwi",
+        imageUrl: "https://i.ibb.co/FDnK4Hn/kiwi.jpg",
+        price: 1.0
+      },
+      {
+        id: 22,
+        name: "Varieties",
+        imageUrl: "https://i.ibb.co/4mrd46D/fruits.jpg",
         price: 1.0
       }
     ]
@@ -109,33 +140,58 @@ const SHOP_DATA = [
     routeName: "cereals",
     items: [
       {
-        id: 18,
+        id: 30,
         name: "Rice",
-        imageUrl: "hhttps://i.ibb.co/fCW4dq0/cereals.jpg",
+        imageUrl: "https://i.ibb.co/fCW4dq0/cereals.jpg",
         price: 1.25
       },
       {
-        id: 19,
-        name: "Baby corn",
+        id: 31,
+        name: "Tea Leaves",
         imageUrl: "https://i.ibb.co/CbD1RnK/tea.jpg",
         price: 0.9
       },
       {
-        id: 20,
-        name: "pops",
-        imageUrl: "https://i.ibb.co/FgCy9Z5/red-apples.jpg",
+        id: 35,
+        name: "Green herbs",
+        imageUrl: "https://i.ibb.co/3rB90FR/green-tea.jpg",
+        price: 1.85
+      },
+      {
+        id: 32,
+        name: "Wheat",
+        imageUrl: "https://i.ibb.co/THqMkhV/wheat.jpg",
         price: 0.9
       },
       {
-        id: 21,
-        name: "Brown beans",
-        imageUrl: "https://i.ibb.co/FgCy9Z5/red-apples.jpg",
+        id: 33,
+        name: "Rye",
+        imageUrl: "https://i.ibb.co/N3yvKXQ/rye.jpg",
         price: 1.65
       },
+
       {
-        id: 22,
-        name: "cereals?",
-        imageUrl: "https://i.ibb.co/gTMFbQz/lettuce.jpg",
+        id: 34,
+        name: "brown nuts",
+        imageUrl: "https://i.ibb.co/HXkw2v3/brown-nuts.jpg",
+        price: 1.85
+      },
+      {
+        id: 36,
+        name: "maize",
+        imageUrl: "https://i.ibb.co/L5RR3Dh/maize.jpg",
+        price: 1.85
+      },
+      {
+        id: 37,
+        name: "coffee beans",
+        imageUrl: "https://i.ibb.co/ncwLbrT/coffee-beans.jpg",
+        price: 1.85
+      },
+      {
+        id: 37,
+        name: "red beans",
+        imageUrl: "https://i.ibb.co/5M8R0Fh/red-beans.jpg",
         price: 1.85
       }
     ]
@@ -146,34 +202,41 @@ const SHOP_DATA = [
     routeName: "diaries",
     items: [
       {
-        id: 23,
-        name: "brocoli",
-        imageUrl: "https://i.ibb.co/w4Tzj4N/broccoli.jpg",
+        id: 40,
+        name: "Milk",
+        imageUrl: "https://i.ibb.co/FXP5G6g/milk.jpg",
         price: 0.25
       },
       {
-        id: 24,
-        name: "Spinach?",
-        imageUrl: "https://i.ibb.co/cXnkFTY/Spinach.jpg",
+        id: 41,
+        name: "Joguht",
+        imageUrl: "https://i.ibb.co/DK7dKtC/joguht.jpg",
         price: 2.0
       },
+
       {
-        id: 25,
+        id: 44,
+        name: "Cheese",
+        imageUrl: "https://i.ibb.co/Gkb1NzW/cheesee.jpg",
+        price: 0.45
+      },
+      {
+        id: 45,
+        name: "Butter & Flour",
+        imageUrl: "https://i.ibb.co/H2HM7jN/butter-and-floor.jpg",
+        price: 0.45
+      },
+      {
+        id: 42,
         name: "sheep milk",
         imageUrl: "https://i.ibb.co/2smMK67/white-lamb.jpg",
         price: 1.8
       },
       {
-        id: 26,
+        id: 43,
         name: "cow milk",
         imageUrl: "https://i.ibb.co/mXRFyTk/diary-cow.jpg",
         price: 0.8
-      },
-      {
-        id: 27,
-        name: "another one",
-        imageUrl: "https://i.ibb.co/fCW4dq0/cereals.jpg",
-        price: 0.45
       }
     ]
   },
@@ -183,33 +246,39 @@ const SHOP_DATA = [
     routeName: "spices",
     items: [
       {
-        id: 30,
+        id: 50,
         name: "Spices",
         imageUrl: "https://i.ibb.co/KVYVRyV/spices.jpg",
         price: 325
       },
       {
-        id: 31,
-        name: "nuts",
-        imageUrl: "https://i.ibb.co/pXtNRcL/nuts.jpg",
+        id: 51,
+        name: "Red Chilli",
+        imageUrl: "https://i.ibb.co/9TDtfDH/red-chili.jpg",
         price: 20
       },
       {
-        id: 32,
-        name: "bananas",
-        imageUrl: "https://i.ibb.co/1qtphV1/bananas.jpg",
+        id: 52,
+        name: "garlic",
+        imageUrl: "https://i.ibb.co/d4fTf0d/garlic.jpg",
         price: 1.9
       },
       {
-        id: 33,
-        name: "Red Cherries",
-        imageUrl: "https://i.ibb.co/xGJD9tD/Cherries.jpg",
+        id: 53,
+        name: "Ginger",
+        imageUrl: "https://i.ibb.co/wRJcNYz/ginger.jpg",
         price: 1.1
       },
       {
-        id: 34,
-        name: "Red Apples",
-        imageUrl: "https://i.ibb.co/FgCy9Z5/red-apples.jpg",
+        id: 54,
+        name: " Cinnamon",
+        imageUrl: "https://i.ibb.co/PDkyvg2/cinnamon.jpg",
+        price: 1.0
+      },
+      {
+        id: 54,
+        name: " Assorted",
+        imageUrl: "https://i.ibb.co/0YnPYLX/assorted-spices.jpg",
         price: 1.0
       }
     ]

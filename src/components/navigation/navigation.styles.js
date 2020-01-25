@@ -11,16 +11,17 @@ export const StyledNavi = styled.div`
 export const StyledNaviContent = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 15px 30px;
+  padding: 0 30px;
   color: #fff;
 
   .logo-container {
     height: 100%;
     width: 50px;
+    padding-top: -10px;
   }
 
-  .logo {
-    width: 30px;
+  img {
+    width: 40px;
   }
 
   .options {
@@ -29,6 +30,7 @@ export const StyledNaviContent = styled.div`
     align-items: center;
     width: 50%;
     height: 100%;
+    padding: 15px 50px;
   }
 
   .option {

@@ -3,26 +3,30 @@ import { Link } from "react-router-dom";
 
 import { StyledNavi, StyledNaviContent } from "./navigation.styles";
 
-import { ReactComponent as Logo } from "../../media/search_icon.svg";
+// import { ReactComponent as Logo } from "../../media/mill.png";
+const Logo = require("../../media/mill.png");
 
 const Navigation = () => (
   <StyledNavi>
     <StyledNaviContent>
       <div className="brang-logo">
         <Link className="logo-container" to="/">
-          <Logo className="logo" />
+          <img src={Logo} alt="nav-logo" />
         </Link>
       </div>
 
       <div className="options">
-        <Link to="/shop" className="option">
-          SHOP
+        <Link to="/farm" className="option">
+          FARM
         </Link>
         <Link to="/contact" className="option">
           CONTACT
         </Link>
+        <Link to="/signin" className="option">
+          SIGN IN
+        </Link>
+        <div className="welcome-text option">HELLO Gabriel</div>
       </div>
-      <div className="welcome-text">HELLO Gabriel</div>
     </StyledNaviContent>
   </StyledNavi>
 );

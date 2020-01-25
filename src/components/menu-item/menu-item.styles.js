@@ -7,7 +7,7 @@ export const StyledMenuItem = styled.div`
   height: 240px;
   display: flex;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid lightgreen;
   margin: 0 7.5px 15px;
   overflow: hidden;
 
