@@ -8,8 +8,9 @@ import Contact from "./pages/contact/contact";
 import SignIn from "./components/sign-in/sign-in";
 import SignUp from "./components/sign-up/sign-up";
 
-import { GlobalStyle } from "./global-styles";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
+
+import { GlobalStyle } from "./global-styles";
 
 class App extends React.Component {
   constructor(props) {
@@ -27,15 +28,12 @@ class App extends React.Component {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
         userRef.onSnapshot(snapShot => {
-          this.setState(
-            {
-              currentUser: {
-                id: snapShot.id,
-                ...snapShot.data()
-              }
-            },
-            () => console.log("state in App", this.state)
-          );
+          this.setState({
+            currentUser: {
+              id: snapShot.id,
+              ...snapShot.data()
+            }
+          });
         });
       } else {
         this.setState({ currentUser: userAuth });

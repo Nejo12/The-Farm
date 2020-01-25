@@ -18,7 +18,7 @@ class SignIn extends Component {
   handleChange = e => {
     const { name, value } = e.target;
 
-    this.setState({ [name]: value }, () => console.log(this.state));
+    this.setState({ [name]: value });
   };
 
   handelSubmit = async e => {
@@ -35,8 +35,9 @@ class SignIn extends Component {
     } catch (error) {
       console.log("Error signin in", error.message);
     }
-    this.setState({ email: "", password: "" }, () =>
-      console.log("form submitted")
+    this.setState(
+      { email: "", password: "" }
+      // () => console.log("form submitted")
     );
   };
 

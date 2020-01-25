@@ -38,15 +38,12 @@ class SignUp extends React.Component {
 
       await createUserProfileDocument(user, { displayName });
 
-      this.setState(
-        {
-          displayName: "",
-          email: "",
-          password: "",
-          confirmPassword: ""
-        },
-        () => console.log("form submitted")
-      );
+      this.setState({
+        displayName: "",
+        email: "",
+        password: "",
+        confirmPassword: ""
+      });
     } catch (error) {
       console.log("error creating user", error.message);
     }
@@ -55,7 +52,10 @@ class SignUp extends React.Component {
   handleChange = e => {
     const { name, value } = e.target;
 
-    this.setState({ [name]: value }, () => console.log(this.state));
+    this.setState(
+      { [name]: value }
+      //() => console.log(this.state)
+    );
   };
 
   render() {
