@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import FormInput from "../form-input/form-input";
 import Button from "../button/button";
 
-import { signInWithGoogle } from "../../firebase/firebase.utils";
+import { auth, signInWithGoogle } from "../../firebase/firebase.utils";
 
 import { StyledSignIn } from "./sign-in.styles";
 
@@ -17,29 +17,43 @@ class SignIn extends Component {
 
   handleChange = e => {
     const { name, value } = e.target;
-    this.setState({ [name]: value });
-    console.log(this.state);
+
+    this.setState({ [name]: value }, () => console.log(this.state));
   };
 
-  handelSubmit = e => {
+  handelSubmit = async e => {
     e.preventDefault();
 
-    this.setState({ email: "", password: "" });
-    console.log("form submitted");
+    const { email, password } = this.state;
+
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+      this.setState({
+        email: "",
+        password: ""
+      });
+    } catch (error) {
+      console.log("Error signin in", error.message);
+    }
+    this.setState({ email: "", password: "" }, () =>
+      console.log("form submitted")
+    );
   };
 
   render() {
+    const { email, password } = this.state;
+
     return (
       <StyledSignIn>
         <div className="sign-in-content">
           <div className="content">
             <h2>Welcome back </h2>
             <span>Sign in with your email and password.</span>
-            <form onSubmit={this.handelSubmit}>
+            <form>
               <FormInput
                 type="email"
                 name="email"
-                value={this.state.email}
+                value={email}
                 handleChange={this.handleChange}
                 label="eMail"
                 required
@@ -48,12 +62,12 @@ class SignIn extends Component {
               <FormInput
                 type="password"
                 name="password"
-                value={this.state.password}
+                value={password}
                 handleChange={this.handleChange}
                 label="Password"
               />
 
-              <Button type="submit" text="Sign in" />
+              <Button text="Sign in" callback={this.handelSubmit} />
               <Button
                 onClick={signInWithGoogle}
                 isGoogleSignIn
