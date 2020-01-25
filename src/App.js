@@ -9,7 +9,7 @@ import SignIn from "./components/sign-in/sign-in";
 import SignUp from "./components/sign-up/sign-up";
 
 import { GlobalStyle } from "./global-styles";
-import { auth } from "./firebase/firebase.utils";
+import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 
 class App extends React.Component {
   constructor(props) {
@@ -23,10 +23,10 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    auth.onAuthStateChanged(user => {
-      this.setState({ currentUser: user });
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async user => {
+      createUserProfileDocument(user);
 
-      // console.log(user);
+      console.log(user);
     });
   }
 
