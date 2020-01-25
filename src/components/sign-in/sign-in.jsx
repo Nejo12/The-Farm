@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import FormInput from "../form-input/form-input";
 import Button from "../button/button";
 
+import { signInWithGoogle } from "../../firebase/firebase.utils";
+
 import { StyledSignIn } from "./sign-in.styles";
 
 class SignIn extends Component {
@@ -52,6 +54,7 @@ class SignIn extends Component {
               />
 
               <Button type="submit" text="Sign in" />
+              <Button onClick={signInWithGoogle} text="Sign in with Google" />
             </form>
 
             <p>
