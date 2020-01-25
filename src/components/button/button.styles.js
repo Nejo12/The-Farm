@@ -7,6 +7,7 @@ export const StyledButton = styled.div`
   letter-spacing: 0.5px;
   line-height: 50px;
   padding: 0 35px;
+  margin: 10px 0;
   font-size: 15px;
   background-color: green;
   color: white;
@@ -16,9 +17,19 @@ export const StyledButton = styled.div`
   border: none;
   cursor: pointer;
 
-  &:hover {
+  :hover {
     background-color: white;
     color: green;
     border: 1px solid green;
+  }
+
+  &.google-sign-in {
+    background: blue;
+    color: #fff;
+
+    :hover {
+      background: #4285f4;
+      border: none;
+    }
   }
 `;

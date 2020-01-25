@@ -1,18 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import { auth } from "../../firebase/firebase.utils";
+
 import { StyledNavi, StyledNaviContent } from "./navigation.styles";
 
-// import { ReactComponent as Logo } from "../../media/mill.png";
 const Logo = require("../../media/mill.png");
 
-const Navigation = () => (
+const Navigation = ({ currentUser }) => (
   <StyledNavi>
     <StyledNaviContent>
       <div className="brang-logo">
         <Link className="logo-container" to="/">
           <img src={Logo} alt="nav-logo" />
         </Link>
+        {currentUser ? <p> Hello, {currentUser.displayName}</p> : null}
       </div>
 
       <div className="options">
@@ -22,10 +24,16 @@ const Navigation = () => (
         <Link to="/contact" className="option">
           CONTACT
         </Link>
-        <Link to="/signin" className="option">
-          SIGN IN
-        </Link>
-        <div className="welcome-text option">HELLO Gabriel</div>
+
+        {currentUser ? (
+          <div className="option" onClick={() => auth.signOut()}>
+            SIGN OUT
+          </div>
+        ) : (
+          <Link to="/signin" className="option">
+            SIGN IN
+          </Link>
+        )}
       </div>
     </StyledNaviContent>
   </StyledNavi>

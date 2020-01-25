@@ -18,6 +18,7 @@ export const StyledNaviContent = styled.div`
     height: 100%;
     width: 50px;
     padding-top: -10px;
+    margin-right: 20px;
   }
 
   img {
@@ -37,5 +38,11 @@ export const StyledNaviContent = styled.div`
     text-decoration: none;
     color: #fff;
     padding: 0 20px;
+    cursor: pointer;
+  }
+
+  .brang-logo {
+    display: flex;
+    justify-content: flex-start;
   }
 `;

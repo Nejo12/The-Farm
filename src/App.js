@@ -26,7 +26,7 @@ class App extends React.Component {
     auth.onAuthStateChanged(user => {
       this.setState({ currentUser: user });
 
-      console.log(user);
+      // console.log(user);
     });
   }
 
@@ -37,7 +37,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Navigation />
+        <Navigation currentUser={this.state.currentUser} />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/farm" component={Shop} />
