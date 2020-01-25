@@ -9,19 +9,46 @@ import SignIn from "./components/sign-in/sign-in";
 import SignUp from "./components/sign-up/sign-up";
 
 import { GlobalStyle } from "./global-styles";
+import { auth } from "./firebase/firebase.utils";
 
-const App = () => (
-  <div className="App">
-    <Navigation />
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/farm" component={Shop} />
-      <Route path="/contact" component={Contact} />
-      <Route path="/signin" component={SignIn} />
-      <Route path="/signup" component={SignUp} />
-    </Switch>
-    <GlobalStyle />
-  </div>
-);
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      currentUser: null
+    };
+  }
+
+  unsubscribeFromAuth = null;
+
+  componentDidMount() {
+    auth.onAuthStateChanged(user => {
+      this.setState({ currentUser: user });
+
+      console.log(user);
+    });
+  }
+
+  componentWillUnmount() {
+    this.unsubscribeFromAuth();
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Navigation />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/farm" component={Shop} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/signin" component={SignIn} />
+          <Route path="/signup" component={SignUp} />
+        </Switch>
+        <GlobalStyle />
+      </div>
+    );
+  }
+}
 
 export default App;
