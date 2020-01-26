@@ -8,10 +8,16 @@ export const StyledCartDropdown = styled.div`
   flex-direction: column;
   padding: 20px;
   border: 1px solid black;
+  color: #000;
   background-color: white;
   top: 90px;
   right: 40px;
   z-index: 5;
+
+  .empty-message {
+    font-size: 18px;
+    margin: 50px auto;
+  }
 
   .cart-items {
     height: 100%;

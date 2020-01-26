@@ -34,6 +34,7 @@ export const StyledCollectionItem = styled.div`
     display: flex;
     justify-content: space-between;
     font-size: 18px;
+    text-transform: capitalize;
 
     .name {
       width: 90%;
