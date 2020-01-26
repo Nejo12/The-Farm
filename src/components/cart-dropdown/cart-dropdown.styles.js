@@ -22,6 +22,5 @@ export const StyledCartDropdown = styled.div`
 
   .button {
     margin-top: auto;
-    margin-bottom: 0;
   }
 `;
