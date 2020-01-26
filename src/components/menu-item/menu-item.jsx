@@ -3,11 +3,8 @@ import { withRouter } from "react-router-dom";
 
 import { StyledMenuItem } from "./menu-item.styles";
 
-const MenuItem = ({ title, imageUrl, size, history, match, linkUrl }) => (
-  <StyledMenuItem
-    className={`${size} menu-item`}
-    onClick={() => history.push(`${match.url}${linkUrl}`)}
-  >
+const MenuItem = ({ title, imageUrl, info, history, match, linkUrl }) => (
+  <StyledMenuItem onClick={() => history.push(`${match.url}${linkUrl}`)}>
     <div
       className="background-image"
       style={{
@@ -16,7 +13,7 @@ const MenuItem = ({ title, imageUrl, size, history, match, linkUrl }) => (
     ></div>
     <div className="content">
       <h1 className="title">{title} </h1>
-      <span className="subtitle">Shop Now</span>
+      <p className="subtitle">{info}</p>
     </div>
   </StyledMenuItem>
 );

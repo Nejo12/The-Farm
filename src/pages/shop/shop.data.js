@@ -198,50 +198,6 @@ const SHOP_DATA = [
   },
   {
     id: 4,
-    title: "Diaries/Milk",
-    routeName: "diaries",
-    items: [
-      {
-        id: 40,
-        name: "Milk",
-        imageUrl: "https://i.ibb.co/FXP5G6g/milk.jpg",
-        price: 0.25
-      },
-      {
-        id: 41,
-        name: "Joguht",
-        imageUrl: "https://i.ibb.co/DK7dKtC/joguht.jpg",
-        price: 2.0
-      },
-
-      {
-        id: 44,
-        name: "Cheese",
-        imageUrl: "https://i.ibb.co/Gkb1NzW/cheesee.jpg",
-        price: 0.45
-      },
-      {
-        id: 45,
-        name: "Butter & Flour",
-        imageUrl: "https://i.ibb.co/H2HM7jN/butter-and-floor.jpg",
-        price: 0.45
-      },
-      {
-        id: 42,
-        name: "sheep milk",
-        imageUrl: "https://i.ibb.co/2smMK67/white-lamb.jpg",
-        price: 1.8
-      },
-      {
-        id: 43,
-        name: "cow milk",
-        imageUrl: "https://i.ibb.co/mXRFyTk/diary-cow.jpg",
-        price: 0.8
-      }
-    ]
-  },
-  {
-    id: 5,
     title: "Spices",
     routeName: "spices",
     items: [
@@ -276,9 +232,114 @@ const SHOP_DATA = [
         price: 1.0
       },
       {
-        id: 54,
+        id: 55,
         name: " Assorted",
         imageUrl: "https://i.ibb.co/0YnPYLX/assorted-spices.jpg",
+        price: 1.0
+      }
+    ]
+  },
+  {
+    id: 5,
+    title: "Diaries/Milk",
+    routeName: "diaries",
+    items: [
+      {
+        id: 40,
+        name: "Milk",
+        imageUrl: "https://i.ibb.co/FXP5G6g/milk.jpg",
+        price: 0.25
+      },
+      {
+        id: 41,
+        name: "Joguht",
+        imageUrl: "https://i.ibb.co/DK7dKtC/joguht.jpg",
+        price: 2.0
+      },
+
+      {
+        id: 42,
+        name: "Cheese",
+        imageUrl: "https://i.ibb.co/Gkb1NzW/cheesee.jpg",
+        price: 0.45
+      },
+      {
+        id: 43,
+        name: "Butter & Flour",
+        imageUrl: "https://i.ibb.co/H2HM7jN/butter-and-floor.jpg",
+        price: 0.45
+      },
+      {
+        id: 44,
+        name: "sheep milk",
+        imageUrl: "https://i.ibb.co/2smMK67/white-lamb.jpg",
+        price: 1.8
+      },
+      {
+        id: 45,
+        name: "cow milk",
+        imageUrl: "https://i.ibb.co/mXRFyTk/diary-cow.jpg",
+        price: 0.8
+      }
+    ]
+  },
+  {
+    id: 6,
+    title: "Livestocks",
+    routeName: "livestocks",
+    items: [
+      {
+        id: 60,
+        name: "Fishes",
+        imageUrl: "https://i.ibb.co/3pSJQ54/fishes.jpg",
+        price: 2.5
+      },
+      {
+        id: 61,
+        name: "Goats",
+        imageUrl: "https://i.ibb.co/rmfyrpR/short-goats.jpg",
+        price: 20
+      },
+      {
+        id: 62,
+        name: "Pigs",
+        imageUrl: "https://i.ibb.co/Z8W3rrS/Pigs.jpg",
+        price: 1.9
+      },
+      {
+        id: 63,
+        name: "Turkey",
+        imageUrl: "https://i.ibb.co/ggqFSVP/Turkey.jpg",
+        price: 1.1
+      },
+      {
+        id: 64,
+        name: " Shrimps",
+        imageUrl: "https://i.ibb.co/c6YS0kq/shrimps.jpg",
+        price: 1.0
+      },
+      {
+        id: 65,
+        name: " Goat",
+        imageUrl: "https://i.ibb.co/nrfm2BX/goats.jpg",
+        price: 1.0
+      },
+      {
+        id: 66,
+        name: " Rams",
+        imageUrl: "https://i.ibb.co/YTggX6L/Ram.jpg",
+        price: 1.0
+      },
+      {
+        id: 67,
+        name: " Cows",
+        imageUrl: "https://i.ibb.co/zVnQsFJ/black-amp-white-cows.jpg",
+        price: 1.0
+      },
+      {
+        id: 68,
+        name: " Ilamas",
+        imageUrl: "https://i.ibb.co/0hVWGVh/Ilama.jpg",
         price: 1.0
       }
     ]

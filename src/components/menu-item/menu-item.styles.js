@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const StyledMenuItem = styled.div`
-  flex: 1 1 auto;
+  display: flex;
   justify-content: center;
+  flex: 1 1 auto;
   min-width: 30%;
   height: 240px;
-  display: flex;
   align-items: center;
   border: 1px solid lightgreen;
   margin: 0 7.5px 15px;
@@ -18,14 +18,6 @@ export const StyledMenuItem = styled.div`
       transform: scale(1.1);
       transition: transform 5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     }
-
-    & .content {
-      opacity: 0.9;
-    }
-  }
-
-  &.large {
-    height: 380px;
   }
 
   .background-image {
@@ -33,30 +25,43 @@ export const StyledMenuItem = styled.div`
     height: 100%;
     background-position: center;
     background-size: cover;
+    z-index: 3;
+
+    &:hover {
+      z-index: 1;
+    }
   }
 
   .content {
-    position: absolute;
     display: flex;
+    position: absolute;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90px;
-    padding: 0 25px;
-    border: 1px solid black;
-    background: #fff;
-    opacity: 0.7;
+    height: 200px;
+    max-width: 28%;
+    padding: 100px 15px 0;
+    color: #fff;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.25) 70%,
+      #1c1c1c 100%
+    );
+    z-index: 2;
+    border-radius: 4px;
+
+    &:hover {
+      z-index: 4;
+    }
 
     .title {
       font-weight: bold;
       margin-bottom: 6px;
       font-size: 22px;
-      color: #4a4a4a;
     }
 
     .subtitle {
-      font-weight: lighter;
-      font-size: 16px;
+      font-size: 12px;
     }
   }
 `;

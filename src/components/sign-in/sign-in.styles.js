@@ -10,7 +10,6 @@ export const StyledSignIn = styled.div`
   height: 100vh;
 
   .sign-in-content {
-    background-color: rgba(0, 0, 0, 0.5);
     position: relative;
     top: 50px;
     margin: auto;
@@ -18,6 +17,7 @@ export const StyledSignIn = styled.div`
     height: 70vh;
     padding: 20px;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.25);
   }
 

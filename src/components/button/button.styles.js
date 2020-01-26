@@ -4,21 +4,22 @@ export const StyledButton = styled.div`
   min-width: 165px;
   width: auto;
   height: 50px;
-  letter-spacing: 0.5px;
-  line-height: 50px;
   padding: 0 35px;
   margin: 10px 0;
   font-size: 15px;
-  background-color: green;
-  color: white;
+  text-align: center;
+  letter-spacing: 0.5px;
+  line-height: 50px;
   text-transform: uppercase;
   font-family: "Open Sans Condensed";
   font-weight: bolder;
+  color: white;
+  background-color: green;
   border: none;
   cursor: pointer;
 
   :hover {
-    background-color: white;
+    background: white;
     color: green;
     border: 1px solid green;
   }
