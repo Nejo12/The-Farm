@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 export const StyledButton = styled.div`
+  display: flex;
+  justify-content: center;
   min-width: 165px;
   width: auto;
   height: 50px;
-  padding: 0 35px;
+  padding: 0 25px;
   margin: 10px 0;
   font-size: 15px;
   text-align: center;
@@ -30,6 +32,18 @@ export const StyledButton = styled.div`
 
     :hover {
       background: #4285f4;
+      border: none;
+    }
+  }
+
+  &.inverted {
+    background: white;
+    color: green;
+    border: 1px solid green;
+
+    &:hover {
+      color: white;
+      background-color: green;
       border: none;
     }
   }

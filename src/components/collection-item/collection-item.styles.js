@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledCollectionItem = styled.div`
+  position: relative;
   width: 22%;
   display: flex;
   flex-direction: column;
@@ -13,6 +14,18 @@ export const StyledCollectionItem = styled.div`
     background-size: cover;
     background-position: center;
     margin-bottom: 5px;
+
+    :hover {
+      opacity: 0.8;
+    }
+  }
+
+  .inverted {
+    width: 80%;
+    opacity: 0.7;
+    position: absolute;
+    top: 250px;
+    border: 1px solid green;
   }
 
   .collection-footer {
