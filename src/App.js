@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 
 import Navigation from "./components/navigation/navigation";
 import Home from "./pages/home/home";
@@ -9,8 +10,10 @@ import Contact from "./pages/contact/contact";
 import SignIn from "./components/sign-in/sign-in";
 import SignUp from "./components/sign-up/sign-up";
 
-import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
+import { selectCurrentUser } from "./redux/user/user.selectors";
 import { setCurrentUser } from "./redux/user/user.action";
+
+import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 
 import { GlobalStyle } from "./global-styles";
 
@@ -66,8 +69,8 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
 });
 
 const mapDispatchToProps = dispatch => ({
