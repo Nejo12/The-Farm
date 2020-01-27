@@ -25,8 +25,8 @@ const Navigation = ({ currentUser, hidden }) => (
       </div>
 
       <div className="options">
-        <Link to="/farm" className="option">
-          FARM
+        <Link to="/shop" className="option">
+          SHOP
         </Link>
         <Link to="/contact" className="option">
           CONTACT

@@ -49,7 +49,7 @@ class App extends React.Component {
         <Navigation />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/farm" component={Shop} />
+          <Route path="/shop" component={Shop} />
           <Route path="/contact" component={Contact} />
           <Route
             path="/signin"
