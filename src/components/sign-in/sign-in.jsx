@@ -77,14 +77,14 @@ class SignIn extends Component {
             </form>
 
             <p>
-              New? Sign up
+              Don't have an account?
               <Link
                 to="/signup"
                 style={{ color: "orange", textDecoration: " none" }}
               >
                 {" "}
                 {""}
-                here
+                Sign up
               </Link>
               .
             </p>

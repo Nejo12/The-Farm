@@ -30,4 +30,16 @@ export const StyledCheckout = styled.div`
     margin-left: auto;
     font-size: 36px;
   }
+
+  .test-warning {
+    text-align: center;
+    color: red;
+    font-size: 24px;
+    margin: 24px 0;
+  }
+
+  button {
+    margin-left: auto;
+    width: 200px;
+  }
 `;

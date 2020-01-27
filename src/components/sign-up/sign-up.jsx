@@ -110,12 +110,14 @@ class SignUp extends React.Component {
               </Button>
             </form>
             <p>
-              Already registered? Sign in{" "}
+              Already have an account?
               <Link
                 to="/signin"
                 style={{ color: "orange", textDecoration: " none" }}
               >
-                here
+                {" "}
+                {""}
+                Sign in
               </Link>
               .
             </p>
