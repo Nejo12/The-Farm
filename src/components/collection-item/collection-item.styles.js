@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const StyledCollectionItem = styled.div`
-  position: relative;
-  width: 22%;
   display: flex;
   flex-direction: column;
+  position: relative;
+  width: 22vw;
   height: 350px;
   align-items: center;
 

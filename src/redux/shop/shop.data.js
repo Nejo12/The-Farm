@@ -1,5 +1,5 @@
-const SHOP_DATA = [
-  {
+const SHOP_DATA = {
+  vegetables: {
     id: 1,
     title: "vegetables",
     routeName: "vegetables",
@@ -48,7 +48,7 @@ const SHOP_DATA = [
       }
     ]
   },
-  {
+  fruits: {
     id: 2,
     title: "Fruits",
     routeName: "fruits",
@@ -134,7 +134,7 @@ const SHOP_DATA = [
       }
     ]
   },
-  {
+  cereals: {
     id: 3,
     title: "Cereals",
     routeName: "cereals",
@@ -189,14 +189,14 @@ const SHOP_DATA = [
         price: 1.85
       },
       {
-        id: 37,
+        id: 38,
         name: "red beans",
         imageUrl: "https://i.ibb.co/5M8R0Fh/red-beans.jpg",
         price: 1.85
       }
     ]
   },
-  {
+  spices: {
     id: 4,
     title: "Spices",
     routeName: "spices",
@@ -239,7 +239,7 @@ const SHOP_DATA = [
       }
     ]
   },
-  {
+  diaries: {
     id: 5,
     title: "Diaries/Milk",
     routeName: "diaries",
@@ -283,7 +283,7 @@ const SHOP_DATA = [
       }
     ]
   },
-  {
+  livestocks: {
     id: 6,
     title: "Livestocks",
     routeName: "livestocks",
@@ -344,6 +344,6 @@ const SHOP_DATA = [
       }
     ]
   }
-];
+};
 
 export default SHOP_DATA;
