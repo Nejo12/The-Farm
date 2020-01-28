@@ -3,7 +3,7 @@ import { StyledCollectionPreview } from "./collection-preview.styles";
 import CollectionItem from "../collection-item/collection-item";
 
 const CollectionPreview = ({ title, items }) => (
-  <StyledCollectionPreview className="collection-preview">
+  <StyledCollectionPreview>
     <h1 className="title">{title.toUpperCase()}</h1>
     <div className="preview">
       {items

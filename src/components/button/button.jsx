@@ -12,7 +12,6 @@ const Button = ({
   <StyledButton
     type="submit"
     onClick={callback}
-    // className={isGoogleSignIn ? "google-sign-in" : ""}
     className={`${isGoogleSignIn ? "google-sign-in" : ""} ${
       inverted ? "inverted" : ""
     }`}

@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import image from "../../media/big-windmill.jpg";
 
 export const StyledHomeImage = styled.div`
-  background: url(${image});
+  background-color: lightgreen;
+  background: url("https://i.ibb.co/WpX3Vzc/windmill.jpg");
   background-repeat: no-repeat;
   position: relative;
   background-size: 100%, cover;

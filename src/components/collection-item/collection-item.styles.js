@@ -15,9 +15,9 @@ export const StyledCollectionItem = styled.div`
     background-position: center;
     margin-bottom: 5px;
 
-    :hover {
+    /* :hover {
       opacity: 0.8;
-    }
+    } */
   }
 
   .inverted {

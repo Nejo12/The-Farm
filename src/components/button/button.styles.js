@@ -8,15 +8,12 @@ export const StyledButton = styled.div`
   height: 50px;
   padding: 0 25px;
   margin: 10px 0;
-  font-size: 15px;
-  text-align: center;
   letter-spacing: 0.5px;
   line-height: 50px;
   text-transform: uppercase;
-  font-family: "Open Sans Condensed";
-  font-weight: bolder;
+  font-weight: 700;
   color: white;
-  background-color: green;
+  background: green;
   border: none;
   cursor: pointer;
 
@@ -43,7 +40,7 @@ export const StyledButton = styled.div`
 
     &:hover {
       color: white;
-      background-color: green;
+      background: green;
       border: none;
     }
   }

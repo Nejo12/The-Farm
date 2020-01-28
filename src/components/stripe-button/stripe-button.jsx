@@ -17,7 +17,7 @@ const StripeCheckoutButton = ({ price }) => {
       name="The Farm"
       billingAddress
       shippingAddress
-      image=""
+      image="https://i.ibb.co/hZQj6np/mill-157613-640.png"
       description={`Your total is € ${price}`}
       amount={priceForStripe}
       panelLabel="Pay Now."

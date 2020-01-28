@@ -5,13 +5,12 @@ const Contact = () => (
     className="contact-page"
     style={{
       textAlign: "center",
-      background: "lightgrey",
       height: "100vh"
     }}
   >
     <h1>CONTACT-PAGE</h1>
 
-    <p>Under Construction... </p>
+    <span>Under Construction... </span>
   </div>
 );
 

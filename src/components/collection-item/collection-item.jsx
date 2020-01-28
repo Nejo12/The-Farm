@@ -10,7 +10,7 @@ import { StyledCollectionItem } from "./collection-item.styles";
 const CollectionItem = ({ item, addItem }) => {
   const { name, price, imageUrl } = item;
   return (
-    <StyledCollectionItem className="collection-item">
+    <StyledCollectionItem>
       <div className="image" style={{ backgroundImage: `url(${imageUrl})` }} />
       <div className="collection-footer">
         <span className="name">{name}</span>

@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import image from "../../media/small-windmill.jpg";
 
 export const StyledSignUp = styled.div`
-  background: url(${image}) no-repeat center center fixed;
+  background-color: lightgreen;
+  background: url("https://i.ibb.co/ssgLXM3/small-windmill.jpg") no-repeat
+    center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

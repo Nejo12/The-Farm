@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const StyledCartDropdown = styled.div`
+  display: flex;
+  flex-direction: column;
   position: absolute;
   width: 240px;
   height: 340px;
-  display: flex;
-  flex-direction: column;
   padding: 20px;
   border: 1px solid black;
   color: #000;
-  background-color: white;
+  background: white;
   top: 90px;
   right: 40px;
   z-index: 5;
@@ -20,9 +20,9 @@ export const StyledCartDropdown = styled.div`
   }
 
   .cart-items {
-    height: 100%;
     display: flex;
     flex-direction: column;
+    height: 100%;
     overflow: scroll;
   }
 

@@ -12,16 +12,17 @@ import { selectCartHidden } from "../../redux/cart/cart.selectors";
 
 import { StyledNavi, StyledNaviContent } from "./navigation.styles";
 
-const Logo = require("../../media/mill.png");
-
 const Navigation = ({ currentUser, hidden }) => (
   <StyledNavi>
     <StyledNaviContent>
       <div className="brang-logo">
         <Link className="logo-container" to="/">
-          <img src={Logo} alt="nav-logo" />
+          <img
+            src="https://i.ibb.co/hZQj6np/mill-157613-640.png"
+            alt="nav-logo"
+          />
         </Link>
-        {currentUser ? <p> Hello, {currentUser.displayName}</p> : null}
+        {currentUser ? <p> Hey, {currentUser.displayName}</p> : null}
       </div>
 
       <div className="options">
