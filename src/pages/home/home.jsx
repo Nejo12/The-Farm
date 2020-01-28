@@ -1,12 +1,12 @@
 import React from "react";
 
+import HomeImage from "../../components/home-image/home-image";
 import Directory from "../../components/directory/directory";
 
 import { StyledHome } from "./home.styles";
-import HomeImage from "../../components/home-image/home-image";
 
 const Home = () => (
-  <StyledHome className="home-page-container">
+  <StyledHome>
     <HomeImage />
     <Directory />
   </StyledHome>

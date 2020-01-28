@@ -44,8 +44,8 @@ export const StyledMenuItem = styled.div`
     color: #fff;
     background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.25) 70%,
-      #1c1c1c 100%
+      rgba(0, 0, 0, 0.2) 70%,
+      rgba(0, 0, 0, 0.5) 100%
     );
     z-index: 2;
     border-radius: 4px;

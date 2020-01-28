@@ -6,8 +6,6 @@ export const StyledNavi = styled.div`
   height: 70px;
   color: #fff;
   padding: 10px;
-
-  /* overflow: hidden; */
   position: fixed;
   top: 0;
   z-index: 99;
@@ -28,6 +26,10 @@ export const StyledNaviContent = styled.div`
 
   img {
     width: 40px;
+  }
+
+  .capitalize {
+    text-transform: capitalize;
   }
 
   .options {

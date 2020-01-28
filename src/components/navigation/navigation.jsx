@@ -22,7 +22,16 @@ const Navigation = ({ currentUser, hidden }) => (
             alt="nav-logo"
           />
         </Link>
-        {currentUser ? <p> Hi, {currentUser.displayName}</p> : null}
+        {currentUser ? (
+          <p className="capitalize">
+            {" "}
+            Hi,{" "}
+            {currentUser.displayName
+              .split(" ")
+              .slice(-1)
+              .join(" ")}
+          </p>
+        ) : null}
       </div>
 
       <div className="options">

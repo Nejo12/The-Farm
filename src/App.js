@@ -17,6 +17,7 @@ import { setCurrentUser } from "./redux/user/user.action";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 
 import { GlobalStyle } from "./global-styles";
+import Footer from "./components/footer/footer";
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
@@ -65,6 +66,7 @@ class App extends React.Component {
           />
           <Route exact path="/checkout" component={CheckoutPage} />
         </Switch>
+        <Footer />
         <GlobalStyle />
       </div>
     );

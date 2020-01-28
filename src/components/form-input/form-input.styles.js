@@ -12,7 +12,7 @@ export const StyledFormInput = styled.div`
   margin: 45px auto;
 
   .form-input {
-    background-color: transparent;
+    background: transparent;
     color: #fff;
     font-size: 18px;
     padding: 10px 10px 10px 5px;
