@@ -22,10 +22,14 @@ const Navigation = ({ currentUser, hidden }) => (
             alt="nav-logo"
           />
         </Link>
-        {currentUser ? <p> Hey, {currentUser.displayName}</p> : null}
+        {currentUser ? <p> Hi, {currentUser.displayName}</p> : null}
       </div>
 
       <div className="options">
+        <Link to="/" className="option">
+          HOME
+        </Link>
+
         <Link to="/shop" className="option">
           SHOP
         </Link>

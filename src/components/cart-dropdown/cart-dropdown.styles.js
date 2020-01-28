@@ -12,7 +12,7 @@ export const StyledCartDropdown = styled.div`
   background: white;
   top: 90px;
   right: 40px;
-  z-index: 5;
+  z-index: 9999999;
 
   .empty-message {
     font-size: 18px;

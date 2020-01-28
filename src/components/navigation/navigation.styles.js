@@ -7,10 +7,10 @@ export const StyledNavi = styled.div`
   color: #fff;
   padding: 10px;
 
-  overflow: hidden;
+  /* overflow: hidden; */
   position: fixed;
   top: 0;
-  z-index: 999;
+  z-index: 99;
 `;
 
 export const StyledNaviContent = styled.div`

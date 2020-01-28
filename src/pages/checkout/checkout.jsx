@@ -40,7 +40,7 @@ const CheckoutPage = ({ cartItems, total }) => (
       <CheckoutItem key={cartItem.id} cartItem={cartItem} />
     ))}
 
-    <div className="total">TOTAL: € {total}</div>
+    <div className="total">TOTAL: € {total.toFixed(2)}</div>
 
     <div className="test-warning">
       *Kindly use this test credit card info to view the functionality*
