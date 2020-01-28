@@ -6,7 +6,11 @@ import CustomButton from "../custom-button/custom-button";
 
 import { auth, createUserProfileDocument } from "../../firebase/firebase.utils";
 
-import { StyledSignUp } from "./sign-up.styles";
+import {
+  SignInStyles,
+  SignInContentStyles,
+  ButtonsBarContainer
+} from "../sign-in-and-sign-up-styles/sign-in-and-sign-up.styles";
 
 class SignUp extends React.Component {
   constructor(props) {
@@ -58,69 +62,64 @@ class SignUp extends React.Component {
   render() {
     const { displayName, email, password, confirmPassword } = this.state;
     return (
-      <StyledSignUp>
-        <div className="sign-up-card">
-          <div className="sign-up-content">
-            <h2> Welcome to the Farm</h2>
-            <span>Register with your email and password.</span>
-            <form>
-              <FormInput
-                type="text"
-                name="displayName"
-                label="Full Name"
-                handleChange={this.handleChange}
-                value={displayName}
-                required
-              />
+      <SignInStyles>
+        <SignInContentStyles>
+          <h2> Welcome to the Farm</h2>
+          <span>Register with your email and password.</span>
+          <form>
+            <FormInput
+              type="text"
+              name="displayName"
+              label="Full Name"
+              handleChange={this.handleChange}
+              value={displayName}
+              required
+            />
 
-              <FormInput
-                type="email"
-                name="email"
-                label="eMail"
-                handleChange={this.handleChange}
-                value={email}
-                required
-              />
-              <FormInput
-                type="password"
-                name="password"
-                label="Password"
-                handleChange={this.handleChange}
-                value={password}
-                required
-              />
-              <FormInput
-                type="password"
-                name="confirmPassword"
-                label="Confirm Password"
-                handleChange={this.handleChange}
-                value={confirmPassword}
-                required
-              />
+            <FormInput
+              type="email"
+              name="email"
+              label="eMail"
+              handleChange={this.handleChange}
+              value={email}
+              required
+            />
 
-              <CustomButton
-                type="submit"
-                text="Register"
-                callback={this.handleSubmit}
-              >
-                Register
-              </CustomButton>
-            </form>
-            <p>
-              Already have an account?
-              <Link
-                to="/signin"
-                style={{ color: "orange", textDecoration: " none" }}
-              >
-                {" "}
-                {""}
-                Sign in
-              </Link>
-              .
-            </p>
-          </div>
-        </div>
-      </StyledSignUp>
+            <FormInput
+              type="password"
+              name="password"
+              label="Password"
+              handleChange={this.handleChange}
+              value={password}
+              required
+            />
+
+            <FormInput
+              type="password"
+              name="confirmPassword"
+              label="Confirm Password"
+              handleChange={this.handleChange}
+              value={confirmPassword}
+              required
+            />
+            <ButtonsBarContainer>
+              <CustomButton text="Register" callback={this.handleSubmit} />
+            </ButtonsBarContainer>
+          </form>
+          <p>
+            Already have an account?
+            <Link
+              to="/signin"
+              style={{ color: "orange", textDecoration: " none" }}
+            >
+              {" "}
+              {""}
+              Sign in
+            </Link>
+            .
+          </p>
+        </SignInContentStyles>
+      </SignInStyles>
     );
   }
 }

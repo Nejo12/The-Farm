@@ -13,12 +13,12 @@ const GlobalButtonStyle = css`
 `;
 
 const GoogleSignInStyles = css`
-  background: blue;
+  background: darkblue;
   color: #fff;
   border: none;
 
   :hover {
-    background: darkblue;
+    background: blue;
   }
 `;
 
@@ -52,6 +52,8 @@ export const CustomButtonStyles = styled.button`
   letter-spacing: 0.5px;
   line-height: 50px;
   text-transform: uppercase;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
   font-weight: 700;
   cursor: pointer;
 

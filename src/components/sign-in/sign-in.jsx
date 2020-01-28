@@ -6,7 +6,11 @@ import CustomButton from "../custom-button/custom-button";
 
 import { auth, signInWithGoogle } from "../../firebase/firebase.utils";
 
-import { StyledSignIn } from "./sign-in.styles";
+import {
+  SignInStyles,
+  SignInContentStyles,
+  ButtonsBarContainer
+} from "../sign-in-and-sign-up-styles/sign-in-and-sign-up.styles";
 
 class SignIn extends Component {
   constructor(props) {
@@ -26,6 +30,8 @@ class SignIn extends Component {
 
     const { email, password } = this.state;
 
+    if (email || password === "") alert("Your input is badly formatted");
+
     try {
       await auth.signInWithEmailAndPassword(email, password);
       this.setState({
@@ -42,52 +48,52 @@ class SignIn extends Component {
     const { email, password } = this.state;
 
     return (
-      <StyledSignIn>
-        <div className="sign-in-content">
-          <div className="content">
-            <h2>Welcome back </h2>
-            <span>Sign in with your email and password.</span>
-            <form>
-              <FormInput
-                type="email"
-                name="email"
-                value={email}
-                handleChange={this.handleChange}
-                label="eMail"
-                required
-              />
+      <SignInStyles>
+        <SignInContentStyles>
+          <h2>Welcome back </h2>
+          <span>Sign in with your email and password.</span>
+          <form>
+            <FormInput
+              type="email"
+              name="email"
+              value={email}
+              handleChange={this.handleChange}
+              label="eMail"
+              required
+            />
 
-              <FormInput
-                type="password"
-                name="password"
-                value={password}
-                handleChange={this.handleChange}
-                label="Password"
-              />
+            <FormInput
+              type="password"
+              name="password"
+              value={password}
+              handleChange={this.handleChange}
+              label="Password"
+            />
 
+            <ButtonsBarContainer>
               <CustomButton text="Sign in" callback={this.handelSubmit} />
               <CustomButton
-                onClick={signInWithGoogle}
                 isGoogleSignIn
+                onClick={signInWithGoogle}
                 text="Sign in with Google"
               />
-            </form>
+            </ButtonsBarContainer>
+          </form>
 
-            <p>
-              Don't have an account?
-              <Link
-                to="/signup"
-                style={{ color: "orange", textDecoration: " none" }}
-              >
-                {" "}
-                {""}
-                Sign up
-              </Link>
-              .
-            </p>
-          </div>
-        </div>
-      </StyledSignIn>
+          <p>
+            Don't have an account?
+            <Link
+              to="/signup"
+              style={{ color: "orange", textDecoration: " none" }}
+            >
+              {" "}
+              {""}
+              Sign up
+            </Link>
+            .
+          </p>
+        </SignInContentStyles>
+      </SignInStyles>
     );
   }
 }
