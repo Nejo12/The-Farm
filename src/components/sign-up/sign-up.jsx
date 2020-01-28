@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import FormInput from "../form-input/form-input";
-import Button from "../button/button";
+import CustomButton from "../custom-button/custom-button";
 
 import { auth, createUserProfileDocument } from "../../firebase/firebase.utils";
 
@@ -52,10 +52,7 @@ class SignUp extends React.Component {
   handleChange = e => {
     const { name, value } = e.target;
 
-    this.setState(
-      { [name]: value }
-      //() => console.log(this.state)
-    );
+    this.setState({ [name]: value });
   };
 
   render() {
@@ -101,13 +98,13 @@ class SignUp extends React.Component {
                 required
               />
 
-              <Button
+              <CustomButton
                 type="submit"
                 text="Register"
                 callback={this.handleSubmit}
               >
                 Register
-              </Button>
+              </CustomButton>
             </form>
             <p>
               Already have an account?

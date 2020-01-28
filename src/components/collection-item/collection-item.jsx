@@ -1,23 +1,29 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import Button from "../button/button";
-
 import { addItem } from "../../redux/cart/cart.action";
 
-import { StyledCollectionItem } from "./collection-item.styles";
+import {
+  CollectionItemContainer,
+  CollectionFooterContainer,
+  AddButton,
+  BackgroundImage,
+  NameContainer,
+  PriceContainer
+} from "./collection-item.styles";
 
-const CollectionItem = ({ item, addItem }) => {
+const Collection = ({ item, addItem }) => {
   const { name, price, imageUrl } = item;
+
   return (
-    <StyledCollectionItem>
-      <div className="image" style={{ backgroundImage: `url(${imageUrl})` }} />
-      <div className="collection-footer">
-        <span className="name">{name}</span>
-        <span className="price">{price}</span>
-      </div>
-      <Button onClick={() => addItem(item)} text="add to cart" inverted />
-    </StyledCollectionItem>
+    <CollectionItemContainer>
+      <BackgroundImage className="image" imageUrl={imageUrl} />
+      <CollectionFooterContainer>
+        <NameContainer>{name}</NameContainer>
+        <PriceContainer>{price}</PriceContainer>
+      </CollectionFooterContainer>
+      <AddButton text="Add to cart" onClick={() => addItem(item)} isInverted />
+    </CollectionItemContainer>
   );
 };
 
@@ -25,4 +31,4 @@ const mapDispatchToProps = dispatch => ({
   addItem: item => dispatch(addItem(item))
 });
 
-export default connect(null, mapDispatchToProps)(CollectionItem);
+export default connect(null, mapDispatchToProps)(Collection);

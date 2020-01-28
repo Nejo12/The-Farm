@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import FormInput from "../form-input/form-input";
-import Button from "../button/button";
+import CustomButton from "../custom-button/custom-button";
 
 import { auth, signInWithGoogle } from "../../firebase/firebase.utils";
 
@@ -35,10 +35,7 @@ class SignIn extends Component {
     } catch (error) {
       console.log("Error signin in", error.message);
     }
-    this.setState(
-      { email: "", password: "" }
-      // () => console.log("form submitted")
-    );
+    this.setState({ email: "", password: "" });
   };
 
   render() {
@@ -68,8 +65,8 @@ class SignIn extends Component {
                 label="Password"
               />
 
-              <Button text="Sign in" callback={this.handelSubmit} />
-              <Button
+              <CustomButton text="Sign in" callback={this.handelSubmit} />
+              <CustomButton
                 onClick={signInWithGoogle}
                 isGoogleSignIn
                 text="Sign in with Google"
