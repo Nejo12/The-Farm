@@ -22,6 +22,7 @@ export const StyledNaviContent = styled.div`
     width: 50px;
     padding-top: -10px;
     margin-right: 20px;
+    margin-left: 50px;
   }
 
   img {

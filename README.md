@@ -57,4 +57,4 @@ View and enjoy the functionality :wink: .
 
 ### `Demo`
 
-Uploaded to ![netlify](outfarm.netlify.com)
+Uploaded to [netlify](https://ourfarm.netlify.com/)
