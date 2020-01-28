@@ -57,11 +57,7 @@ export const StyledMenuItem = styled.div`
     .title {
       font-weight: bold;
       margin-bottom: 6px;
-      font-size: 22px;
-    }
-
-    .subtitle {
-      font-size: 12px;
+      font-size: 24px;
     }
   }
 `;

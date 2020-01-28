@@ -13,7 +13,7 @@ const MenuItem = ({ title, imageUrl, info, history, match, linkUrl }) => (
     ></div>
     <div className="content">
       <h1 className="title">{title} </h1>
-      <p className="subtitle">{info}</p>
+      <p>{info}</p>
     </div>
   </StyledMenuItem>
 );
