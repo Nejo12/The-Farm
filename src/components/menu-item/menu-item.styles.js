@@ -5,7 +5,7 @@ export const StyledMenuItem = styled.div`
   justify-content: center;
   flex: 1 1 auto;
   min-width: 30%;
-  height: 240px;
+  height: 300px;
   align-items: center;
   border: 1px solid lightgreen;
   margin: 0 7.5px 15px;

@@ -36,12 +36,12 @@ export const StyledButton = styled.div`
   &.inverted {
     background: white;
     color: green;
-    border: 1px solid green;
+    border: 2px solid #fff;
 
     &:hover {
       color: white;
       background: green;
-      border: none;
+      border: 1px solid #fff;
     }
   }
 `;

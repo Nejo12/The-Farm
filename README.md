@@ -2,15 +2,16 @@
 
 An e-commerce app built solely on the classic react-redux.
 Using firebase for user authentication via username and password, as well as google sign-in authentication.
-Stripe handles the payment information. Please note that this is still in test mode, so a test-credit card is provided on checkout page.
+Stripe handles the payment information. All images are retrived through online link to improve performace. Please note that this is still in test mode, so a test-credit card is provided on checkout page.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### `Future features`
 
-include several other sign in methods, such as
+includes several other sign-in methods, such as
 
 - email confirmation
+- sms confirmation
 - facebook
 - github
 
