@@ -57,6 +57,22 @@ export const addCollectionAndDocuments = async (
   return await batch.commit();
 };
 
+// convert first to object, not array... to add
+export const convertCollectionsSnapshotToMap = collections => {
+  const transformedCollection = collections.docs.map(doc => {
+    const { title, items } = doc.data();
+
+    return {
+      routeName: encodeURI(title.toLowerCase()), // returns and converts then enables chars that url cannot read.
+      id: doc.id,
+      title,
+      items
+    };
+  });
+
+  console.log(transformedCollection);
+};
+
 firebase.initializeApp(config);
 
 export const auth = firebase.auth();
