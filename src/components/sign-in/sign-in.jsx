@@ -30,8 +30,6 @@ class SignIn extends Component {
 
     const { email, password } = this.state;
 
-    if (email || password === "") alert("Your input is badly formatted");
-
     try {
       await auth.signInWithEmailAndPassword(email, password);
       this.setState({
@@ -40,6 +38,7 @@ class SignIn extends Component {
       });
     } catch (error) {
       console.log("Error signin in", error.message);
+      alert(error.message);
     }
     this.setState({ email: "", password: "" });
   };

@@ -7,46 +7,51 @@ import {
   removeItem
 } from "../../redux/cart/cart.action";
 
-import { StyledCheckoutItem } from "./checkout-item.styles";
+import {
+  CheckoutItemContainerStyles,
+  ImageContainerStyles,
+  TextContainerStyles,
+  QuantityContainerStyles,
+  RemoveButtonContainerStyles
+} from "./checkout-item.styles";
 
 const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;
 
   return (
-    <StyledCheckoutItem>
-      <div className="image-container">
+    <CheckoutItemContainerStyles>
+      <ImageContainerStyles>
         <img src={imageUrl} alt="checkout-item" />
-      </div>
-      <span className="name">{name}</span>
-      <span className="quantity">
+      </ImageContainerStyles>
+      <TextContainerStyles>{name}</TextContainerStyles>
+      <QuantityContainerStyles>
         <span
-          className="arrow"
           onClick={() => removeItem(cartItem)}
           role="img"
           aria-labelledby="decrease"
         >
           &#10134;
         </span>
-        <span className="value">{quantity}</span>
+        <div>{quantity}</div>
         <span
-          className="arrow"
           onClick={() => addItem(cartItem)}
           role="img"
           aria-labelledby="increase"
         >
           &#10133;
         </span>
-      </span>
-      <span className="price">{price}</span>
-      <span
-        className="remove-button"
-        onClick={() => clearItem(cartItem)}
-        role="img"
-        aria-labelledby="remove"
-      >
-        &#10060;
-      </span>
-    </StyledCheckoutItem>
+      </QuantityContainerStyles>
+      <TextContainerStyles>€ {price}</TextContainerStyles>
+      <RemoveButtonContainerStyles>
+        <span
+          onClick={() => clearItem(cartItem)}
+          role="img"
+          aria-labelledby="remove"
+        >
+          &#10060;
+        </span>
+      </RemoveButtonContainerStyles>
+    </CheckoutItemContainerStyles>
   );
 };
 

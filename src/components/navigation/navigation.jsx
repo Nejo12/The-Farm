@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
@@ -10,57 +10,64 @@ import { auth } from "../../firebase/firebase.utils";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
 
-import { StyledNavi, StyledNaviContent } from "./navigation.styles";
+import {
+  NaviContainer,
+  StyledNaviContent,
+  LogoContainer,
+  OptionsContainer,
+  OptionLink,
+  BrandLogo
+} from "./navigation.styles";
 
 const Navigation = ({ currentUser, hidden }) => (
-  <StyledNavi>
+  <NaviContainer>
     <StyledNaviContent>
-      <div className="brang-logo">
-        <Link className="logo-container" to="/">
+      <BrandLogo>
+        <LogoContainer to="/">
           <img
             src="https://i.ibb.co/hZQj6np/mill-157613-640.png"
             alt="nav-logo"
           />
-        </Link>
+        </LogoContainer>
         {currentUser ? (
-          <p className="capitalize">
-            {" "}
-            Hi,{" "}
-            {currentUser.displayName
-              .split(" ")
-              .slice(-1)
-              .join(" ")}
-          </p>
+          currentUser.photoURL ? (
+            <img
+              style={{ width: "40px", height: "40px", borderRadius: "50%" }}
+              src={currentUser.photoURL}
+              alt="user-display"
+            />
+          ) : (
+            <p className="capitalize">
+              {" "}
+              Hi,{" "}
+              {currentUser.displayName
+                .split(" ")
+                .slice(-1)
+                .join(" ")}
+            </p>
+          )
         ) : null}
-      </div>
+      </BrandLogo>
 
-      <div className="options">
-        <Link to="/" className="option">
-          HOME
-        </Link>
+      <OptionsContainer>
+        <OptionLink to="/">HOME</OptionLink>
 
-        <Link to="/shop" className="option">
-          SHOP
-        </Link>
-        <Link to="/contact" className="option">
-          CONTACT
-        </Link>
+        <OptionLink to="/shop">SHOP</OptionLink>
+        <OptionLink to="/contact">CONTACT</OptionLink>
 
         {currentUser ? (
-          <div className="option" onClick={() => auth.signOut()}>
+          <OptionLink as="div" onClick={() => auth.signOut()}>
             SIGN OUT
-          </div>
+          </OptionLink>
         ) : (
-          <Link to="/signin" className="option">
-            SIGN IN
-          </Link>
+          <OptionLink to="/signin">SIGN IN</OptionLink>
         )}
 
         <CartIcon />
-      </div>
+      </OptionsContainer>
     </StyledNaviContent>
     {hidden ? null : <CartDropdown />}
-  </StyledNavi>
+  </NaviContainer>
 );
 
 const mapStateToProps = createStructuredSelector({

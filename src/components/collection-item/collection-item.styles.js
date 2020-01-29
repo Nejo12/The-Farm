@@ -37,16 +37,18 @@ export const CollectionFooterContainer = styled.div`
   width: 100%;
   height: 5%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   font-size: 18px;
 `;
 
 export const NameContainer = styled.span`
   width: 90%;
   margin-bottom: 15px;
+  margin-left: 10px;
 `;
 
 export const PriceContainer = styled.span`
   width: 10%;
   text-align: right;
+  margin-right: 15px;
 `;

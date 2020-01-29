@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledMenuItem = styled.div`
+export const MenuItemContainer = styled.div`
   display: flex;
   justify-content: center;
   flex: 1 1 auto;
@@ -31,33 +31,33 @@ export const StyledMenuItem = styled.div`
       z-index: 1;
     }
   }
+`;
 
-  .content {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    max-width: 28%;
-    padding: 100px 15px 0;
-    color: #fff;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.2) 70%,
-      rgba(0, 0, 0, 0.5) 100%
-    );
-    z-index: 2;
-    border-radius: 4px;
+export const MenuItemContent = styled.div`
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  max-width: 28%;
+  padding: 100px 15px 0;
+  color: #fff;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 70%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  z-index: 2;
+  border-radius: 4px;
 
-    &:hover {
-      z-index: 4;
-    }
-
-    .title {
-      font-weight: bold;
-      margin-bottom: 6px;
-      font-size: 24px;
-    }
+  &:hover {
+    z-index: 4;
   }
+`;
+
+export const MenuItemTitle = styled.h1`
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 24px;
 `;

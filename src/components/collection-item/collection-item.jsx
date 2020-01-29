@@ -20,7 +20,7 @@ const Collection = ({ item, addItem }) => {
       <BackgroundImage className="image" imageUrl={imageUrl} />
       <CollectionFooterContainer>
         <NameContainer>{name}</NameContainer>
-        <PriceContainer>{price}</PriceContainer>
+        <PriceContainer>€{price}</PriceContainer>
       </CollectionFooterContainer>
       <AddButton text="Add to cart" onClick={() => addItem(item)} isInverted />
     </CollectionItemContainer>

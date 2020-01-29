@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const StyledNavi = styled.div`
+export const NaviContainer = styled.div`
   background: green;
   width: 100%;
   height: 70px;
@@ -17,14 +18,6 @@ export const StyledNaviContent = styled.div`
   padding: 0 30px;
   color: #fff;
 
-  .logo-container {
-    height: 100%;
-    width: 50px;
-    padding-top: -10px;
-    margin-right: 20px;
-    margin-left: 50px;
-  }
-
   img {
     width: 40px;
   }
@@ -32,25 +25,33 @@ export const StyledNaviContent = styled.div`
   .capitalize {
     text-transform: capitalize;
   }
+`;
 
-  .options {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 50%;
-    height: 100%;
-    padding: 15px 50px;
-  }
+export const LogoContainer = styled(Link)`
+  height: 100%;
+  width: 50px;
+  padding-top: -10px;
+  margin-right: 20px;
+  margin-left: 50px;
+`;
 
-  .option {
-    text-decoration: none;
-    color: #fff;
-    padding: 0 20px;
-    cursor: pointer;
-  }
+export const BrandLogo = styled.div`
+  display: flex;
+  justify-content: flex-start;
+`;
 
-  .brang-logo {
-    display: flex;
-    justify-content: flex-start;
-  }
+export const OptionsContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  padding: 15px 50px;
+`;
+
+export const OptionLink = styled(Link)`
+  text-decoration: none;
+  color: #fff;
+  padding: 0 20px;
+  cursor: pointer;
 `;

@@ -1,10 +1,10 @@
 import React from "react";
 
-import { StyledFooter } from "./footer.styles";
+import { StyledFooter, FooterNameStyles } from "./footer.styles";
 
 const Footer = () => (
   <StyledFooter>
-    <p className="text">Gabriel Olaniyi 2020 . . . </p>
+    <FooterNameStyles>Gabriel Olaniyi 2020 . . . </FooterNameStyles>
   </StyledFooter>
 );
 

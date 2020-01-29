@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledHomeImage = styled.div`
+export const HomeImageContainer = styled.div`
   background-color: lightgreen;
   background: url("https://i.ibb.co/WpX3Vzc/windmill.jpg");
   background-repeat: no-repeat;
@@ -21,33 +21,33 @@ export const StyledHomeImage = styled.div`
   }
 `;
 
-export const StyledContent = styled.div`
+export const HomeImageContent = styled.div`
   padding: 20px;
+`;
 
-  .home-image-text {
-    position: absolute;
-    max-width: 500px;
-    min-height: 100px;
-    color: #fff;
-    bottom: 80px;
-    margin: 20px;
-    padding: 10px 30px;
-    border: 2px solid #fff;
+export const HomeImageText = styled.div`
+  position: absolute;
+  max-width: 500px;
+  min-height: 100px;
+  color: #fff;
+  bottom: 80px;
+  margin: 20px;
+  padding: 10px 30px;
+  border: 2px solid #fff;
 
-    h1 {
-      font-size: 2rem;
-    }
+  h1 {
+    font-size: 2rem;
+  }
 
-    span {
-      color: green;
-      font-size: 42px;
-      text-shadow: 2px 2px #fff;
-      text-decoration: underline;
-    }
+  span {
+    color: green;
+    font-size: 42px;
+    text-shadow: 2px 2px #fff;
+    text-decoration: underline;
+  }
 
-    p {
-      font-size: 1rem;
-      line-height: 1.3rem;
-    }
+  p {
+    font-size: 1rem;
+    line-height: 1.3rem;
   }
 `;
