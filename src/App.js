@@ -14,15 +14,8 @@ import Footer from "./components/footer/footer";
 
 import { selectCurrentUser } from "./redux/user/user.selectors";
 import { setCurrentUser } from "./redux/user/user.action";
-import { selectCollectionsForPreview } from "./redux/shop/shop.selectors";
 
-// import CollectionPreview from "./components/collection-preview/collection-preview";
-
-import {
-  auth,
-  createUserProfileDocument,
-  addCollectionAndDocuments
-} from "./firebase/firebase.utils";
+import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 
 import { GlobalStyle } from "./global-styles";
 
@@ -30,7 +23,7 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    const { setCurrentUser, collectionsArray } = this.props;
+    const { setCurrentUser } = this.props;
 
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
@@ -43,10 +36,6 @@ class App extends React.Component {
         });
       } else {
         setCurrentUser(userAuth);
-        addCollectionAndDocuments(
-          "collections",
-          collectionsArray.map(({ title, items }) => ({ title, items }))
-        ); //destructure and setting just the values that we want to keep.
       }
     });
   }
@@ -85,8 +74,7 @@ class App extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser,
-  collectionsArray: selectCollectionsForPreview
+  currentUser: selectCurrentUser
 });
 
 const mapDispatchToProps = dispatch => ({
