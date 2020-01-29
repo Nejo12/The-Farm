@@ -32,7 +32,12 @@ const Navigation = ({ currentUser, hidden }) => (
         {currentUser ? (
           currentUser.photoURL ? (
             <img
-              style={{ width: "40px", height: "40px", borderRadius: "50%" }}
+              style={{
+                width: "40px",
+                height: "40px",
+                borderRadius: "50%",
+                border: "2px solid #fff"
+              }}
               src={currentUser.photoURL}
               alt="user-display"
             />
