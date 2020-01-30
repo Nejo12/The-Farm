@@ -49,7 +49,7 @@ View and enjoy the functionality :wink: .
 
 ### `Tech stack`
 
-- React v16
+- [React v16](https://reactjs.org/)
 - [react-router-dom v5](https://www.npmjs.com/package/react-router-dom)
 - [redux-thunk v2](https://www.npmjs.com/package/redux-thunk)
 - [styled-components](https://styled-components.com/)
