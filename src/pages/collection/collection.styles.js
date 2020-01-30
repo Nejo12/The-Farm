@@ -8,6 +8,7 @@ export const CollectionContainerStyles = styled.div`
 export const CollectionTitleStyles = styled.h2`
   font-size: 38px;
   margin: 0 auto 30px;
+  text-transform: capitalize;
 `;
 
 export const CollectionItemsStyles = styled.div`

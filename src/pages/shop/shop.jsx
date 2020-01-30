@@ -2,6 +2,8 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { connect } from "react-redux";
 
+import WithSpinner from "../../components/with-spinner/with-spinner";
+
 import CollectionsOverview from "../../components/collections-overview/collections-overview";
 import Collection from "../collection/collection";
 import { updateCollections } from "../../redux/shop/shop.actions";
@@ -13,7 +15,14 @@ import {
 
 import { StyledShop } from "./shop.styles";
 
+const CollectionsOverviewWithSpinner = WithSpinner(CollectionsOverview);
+const CollectionWithSpinner = WithSpinner(Collection);
+
 class Shop extends React.Component {
+  state = {
+    loading: true
+  };
+
   unsubscribeFromSnapshot = null;
 
   componentDidMount() {
@@ -26,15 +35,31 @@ class Shop extends React.Component {
       const collectionsMap = convertCollectionsSnapshotToMap(snapShot);
       // console.log(collectionsMap);
       updateCollections(collectionsMap);
+
+      this.setState({
+        loading: false
+      });
     });
   }
 
   render() {
     const { match } = this.props;
+    const { loading } = this.state;
     return (
       <StyledShop>
-        <Route exact path={`${match.path}`} component={CollectionsOverview} />
-        <Route path={`${match.path}/:collectionId`} component={Collection} />
+        <Route
+          exact
+          path={`${match.path}`}
+          render={props => (
+            <CollectionsOverviewWithSpinner isLoading={loading} {...props} />
+          )}
+        />
+        <Route
+          path={`${match.path}/:collectionId`}
+          render={props => (
+            <CollectionWithSpinner isLoading={loading} {...props} />
+          )}
+        />
       </StyledShop>
     );
   }
