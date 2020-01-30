@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   CollectionPreviewContainerStyles,
   CollectionPreviewStyles,
@@ -6,7 +7,7 @@ import {
 } from "./collection-preview.styles";
 import CollectionItem from "../collection-item/collection-item";
 
-const CollectionPreview = ({ title, items }) => (
+const CollectionPreview = ({ title, items, match }) => (
   <CollectionPreviewContainerStyles>
     <CollectionPreviewTitleStyles>
       {title.toUpperCase()}

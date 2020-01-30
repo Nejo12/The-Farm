@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import CollectionItem from "../../components/collection-item/collection-item";
+
 import { selectCollection } from "../../redux/shop/shop.selectors";
 
 import {
@@ -11,8 +12,6 @@ import {
 } from "./collection.styles";
 
 const Collection = ({ collection }) => {
-  // console.log(collection);
-
   const { title, items } = collection;
   return (
     <CollectionContainerStyles>
