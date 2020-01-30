@@ -51,6 +51,7 @@ View and enjoy the functionality :wink: .
 
 - React v16
 - react-router-dom v5
+- [redux-thunk v2](https://www.npmjs.com/package/redux-thunk)
 - [styled-components](https://styled-components.com/)
 - [Firebase](https://firebase.google.com/)
 - [Stripe](https://stripe.com)
