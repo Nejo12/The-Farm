@@ -55,7 +55,7 @@ View and enjoy the functionality :wink: .
 - [styled-components](https://styled-components.com/)
 - [Firebase](https://firebase.google.com/)
 - [Stripe](https://stripe.com)
-- [Reselect](https://github.com/reduxjs/reselect) - Memoized the Redux state (for performance).
+- [Reselect](https://github.com/reduxjs/reselect)
 
 ### `Demo`
 
