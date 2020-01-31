@@ -60,7 +60,15 @@ const Navigation = ({ currentUser, hidden }) => (
         <OptionLink to="/shop">SHOP</OptionLink>
 
         {currentUser ? (
-          <OptionLink as="div" onClick={() => auth.signOut()}>
+          <OptionLink
+            to="/"
+            onClick={() => {
+              auth.signOut();
+              localStorage.clear();
+              sessionStorage.clear();
+              alert("Signed Out Success.");
+            }}
+          >
             SIGN OUT
           </OptionLink>
         ) : (

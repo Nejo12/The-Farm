@@ -52,6 +52,7 @@ View and enjoy the functionality :wink: .
 - [React v16](https://reactjs.org/)
 - [react-router-dom v5](https://www.npmjs.com/package/react-router-dom)
 - [redux-thunk v2](https://www.npmjs.com/package/redux-thunk)
+- [redux-persist](https://github.com/rt2zz/redux-persist)
 - [styled-components](https://styled-components.com/)
 - [Firebase](https://firebase.google.com/)
 - [Stripe](https://stripe.com)
