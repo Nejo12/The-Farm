@@ -8,7 +8,7 @@ export const CollectionItemContainer = styled.div`
   align-items: center;
   width: 22vw;
   height: 350px;
-  margin: 0 5px;
+  margin-bottom: 30px;
 
   &:hover {
     button {
