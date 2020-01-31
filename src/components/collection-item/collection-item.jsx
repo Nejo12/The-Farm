@@ -17,7 +17,7 @@ const Collection = ({ item, addItem }) => {
 
   return (
     <CollectionItemContainer>
-      <BackgroundImage className="image" imageUrl={imageUrl} />
+      <BackgroundImage imageUrl={imageUrl} />
       <CollectionFooterContainer>
         <NameContainer>{name}</NameContainer>
         <PriceContainer>€{price}</PriceContainer>

@@ -30,6 +30,10 @@ export const MenuItemContainer = styled.div`
     &:hover {
       z-index: 1;
     }
+
+    @media screen and (max-width: 1300px) {
+      z-index: -9;
+    }
   }
 `;
 
@@ -41,7 +45,7 @@ export const MenuItemContent = styled.div`
   align-items: center;
   height: 200px;
   max-width: 28%;
-  padding: 100px 15px 0;
+  padding: 30px 15px 0;
   color: #fff;
   background: linear-gradient(
     to bottom,
@@ -53,6 +57,12 @@ export const MenuItemContent = styled.div`
 
   &:hover {
     z-index: 4;
+  }
+
+  @media screen and (max-width: 400px) {
+    padding: 20px 10px;
+    min-width: 40%;
+    height: 300px;
   }
 `;
 

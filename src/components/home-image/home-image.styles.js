@@ -19,6 +19,15 @@ export const HomeImageContainer = styled.div`
       opacity: 1;
     }
   }
+
+  @media screen and (max-width: 900px) {
+    height: 400px;
+  }
+
+  @media screen and (max-width: 600px) {
+    background-image: none;
+    background-color: darkgreen;
+  }
 `;
 
 export const HomeImageContent = styled.div`
@@ -41,7 +50,7 @@ export const HomeImageText = styled.div`
 
   span {
     color: green;
-    font-size: 42px;
+    font-size: 3rem;
     text-shadow: 2px 2px #fff;
     text-decoration: underline;
   }
@@ -49,5 +58,16 @@ export const HomeImageText = styled.div`
   p {
     font-size: 1rem;
     line-height: 1.3rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    min-height: 20px;
+    bottom: 20px;
+    padding: 10px;
+
+    span {
+      color: lightgreen;
+      font-size: 2rem;
+    }
   }
 `;

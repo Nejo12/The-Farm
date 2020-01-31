@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
@@ -36,7 +35,8 @@ const Navigation = ({ currentUser, hidden }) => (
                 width: "40px",
                 height: "40px",
                 borderRadius: "50%",
-                border: "2px solid #fff"
+                border: "2px solid #fff",
+                marginTop: "20px"
               }}
               src={currentUser.photoURL}
               alt="user-display"
@@ -58,7 +58,6 @@ const Navigation = ({ currentUser, hidden }) => (
         <OptionLink to="/">HOME</OptionLink>
 
         <OptionLink to="/shop">SHOP</OptionLink>
-        <OptionLink to="/contact">CONTACT</OptionLink>
 
         {currentUser ? (
           <OptionLink as="div" onClick={() => auth.signOut()}>

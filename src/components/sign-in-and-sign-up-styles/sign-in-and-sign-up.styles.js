@@ -3,12 +3,15 @@ import styled from "styled-components";
 export const SignInStyles = styled.div`
   background-color: lightgreen;
   background: url("https://i.ibb.co/ssgLXM3/small-windmill.jpg") no-repeat
-    center center fixed;
+    center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   height: 100vh;
+  padding: 0;
+  margin-bottom: -20px;
+  overflow: auto;
 `;
 
 export const SignInContentStyles = styled.div`
@@ -16,7 +19,7 @@ export const SignInContentStyles = styled.div`
   top: 50px;
   margin: auto;
   max-width: 400px;
-  height: 80%;
+  height: auto;
   padding: 20px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
