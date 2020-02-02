@@ -8,6 +8,7 @@ import CartDropdown from "../cart-dropdown/cart-dropdown";
 import { auth } from "../../firebase/firebase.utils";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
+import { clearCart } from "../../redux/cart/cart.action";
 
 import {
   NaviContainer,
@@ -18,7 +19,7 @@ import {
   BrandLogo
 } from "./navigation.styles";
 
-const Navigation = ({ currentUser, hidden }) => (
+const Navigation = ({ currentUser, hidden, clearCart }) => (
   <NaviContainer>
     <StyledNaviContent>
       <BrandLogo>
@@ -64,8 +65,7 @@ const Navigation = ({ currentUser, hidden }) => (
             to="/"
             onClick={() => {
               auth.signOut();
-              localStorage.clear();
-              sessionStorage.clear();
+              clearCart();
               alert("Signed Out Success.");
             }}
           >
@@ -87,4 +87,8 @@ const mapStateToProps = createStructuredSelector({
   hidden: selectCartHidden
 });
 
-export default connect(mapStateToProps)(Navigation);
+const mapDispatchToProps = dispatch => ({
+  clearCart: () => dispatch(clearCart())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navigation);
