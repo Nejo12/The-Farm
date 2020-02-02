@@ -60,5 +60,6 @@ View and enjoy the functionality :wink: .
 
 ### `Demo`
 
-Uploaded to [netlify](https://ourfarm.netlify.com/)
+Deployed to [netlify](https://ourfarm.netlify.com/)
+
 # The-Farm-hooks
