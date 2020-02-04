@@ -19,4 +19,9 @@ export const CollectionItemsStyles = styled.div`
   @media screen and (max-width: 900px) {
     grid-template-columns: 1fr 1fr;
   }
+
+  @media screen and (max-width: 520px) {
+    grid-template-columns: 1fr;
+    margin-left: -20px;
+  }
 `;

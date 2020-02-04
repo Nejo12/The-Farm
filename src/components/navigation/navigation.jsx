@@ -10,6 +10,7 @@ import { selectCurrentUser } from "../../redux/user/user.selectors";
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
 import { clearCart } from "../../redux/cart/cart.action";
 
+import { toast } from "react-toastify";
 import {
   NaviContainer,
   StyledNaviContent,
@@ -66,7 +67,7 @@ const Navigation = ({ currentUser, hidden, clearCart }) => (
             onClick={() => {
               auth.signOut();
               clearCart();
-              alert("Signed Out Success.");
+              toast.success("Signed Out Success.");
             }}
           >
             SIGN OUT

@@ -38,6 +38,7 @@ export const HomeImageText = styled.div`
   position: absolute;
   max-width: 500px;
   min-height: 100px;
+  background: rgba(0, 0, 0, 0.5);
   color: #fff;
   bottom: 80px;
   margin: 20px;
@@ -52,7 +53,6 @@ export const HomeImageText = styled.div`
     color: green;
     font-size: 3rem;
     text-shadow: 2px 2px #fff;
-    text-decoration: underline;
   }
 
   p {

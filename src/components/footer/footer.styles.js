@@ -8,6 +8,22 @@ export const StyledFooter = styled.div`
   position: fixed;
   bottom: 0;
   z-index: 99;
+
+  @keyframes blink {
+    50% {
+      color: transparent;
+    }
+  }
+  .loader__dot {
+    display: inline;
+    animation: 1s blink infinite;
+  }
+  .loader__dot:nth-child(2) {
+    animation-delay: 250ms;
+  }
+  .loader__dot:nth-child(3) {
+    animation-delay: 500ms;
+  }
 `;
 
 export const FooterNameStyles = styled.div`

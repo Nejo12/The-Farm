@@ -8,7 +8,7 @@ export const CollectionItemContainer = styled.div`
   align-items: center;
   width: 22vw;
   height: 350px;
-  margin-bottom: 30px;
+  margin: 30px 5px;
 
   &:hover {
     button {
@@ -21,7 +21,7 @@ export const CollectionItemContainer = styled.div`
     width: 40vw;
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 520px) {
     width: 80vw;
   }
 `;
