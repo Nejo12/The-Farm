@@ -44,14 +44,7 @@ const Navigation = ({ currentUser, hidden, clearCart }) => (
               alt="user-display"
             />
           ) : (
-            <p className="capitalize">
-              {" "}
-              Hi,{" "}
-              {currentUser.displayName
-                .split(" ")
-                .slice(-1)
-                .join(" ")}
-            </p>
+            <p className="capitalize"> Hi, {currentUser.displayName}</p>
           )
         ) : null}
       </BrandLogo>
